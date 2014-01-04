@@ -18,13 +18,14 @@
 </div>
 <div class="row marketing" ng-controller="ProjectCtrl">
     <h3>Projects</h3>
-    <input type="text" ng-model="search.title"/>
+    <label for="filter">Filter: </label>
+    <input id="filter" type="text" ng-model="search.title"/>
     <table class="table">
-        <thead>
-        <th>Title</th>
-        <th>Start</th>
-        <th>End</th>
-        </thead>
+        <tr>
+            <th>Title</th>
+            <th>Start</th>
+            <th>End</th>
+        </tr>
         <tr ng-repeat="project in projects | filter:search | orderBy:'-end_date' | limitTo:5">
             <td>{{project.title}}</td>
             <td>{{project.start_date | projectDate }}</td>
