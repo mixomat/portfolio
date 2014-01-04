@@ -3,6 +3,10 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 //noinspection CssUnknownTarget
 @import 'sass-bootstrap/lib/bootstrap';
 
+/* FONTS */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -10,83 +14,173 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     padding: 0.2em 0;
 }
 
-/* Space out content a bit */
+/* OVERALL ASPECT */
 body {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  background-color: #f2f2f2;
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
+
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+
+  margin-top: 70px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-    padding-left: 15px;
-    padding-right: 15px;
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway";
+  font-weight: 300;
+  color: #333;
 }
 
-/* Custom page header */
-.header {
-    border-bottom: 1px solid #e5e5e5;
+/* Paragraph & Typographic */
+p {
+  line-height: 28px;
+  margin-bottom: 25px;
 }
 
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+.centered {
+  text-align: center;
 }
 
-/* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
+.mt {
+  margin-top: 40px;
 }
 
-.container-narrow > hr {
-    margin: 30px 0;
+/* Links */
+a {
+  color: #f85c37;
+  word-wrap: break-word;
+
+  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
+a:hover,
+a:focus {
+  color: #7b7b7b;
+  text-decoration: none;
+  outline: 0;
 }
 
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+a:before,
+a:after {
+  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
+/* Bootstrap Modifications */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
-.marketing p + h4 {
-    margin-top: 28px;
+
+.navbar {
+  font-weight: 800;
+  font-size: 14px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: white;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
-    }
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #74cfae;
+}
 
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
-    }
+.navbar-brand {
+  font-size: 60px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.btn-theme {
+  color: white;
+  background-color: #74cfae;
+  border-color: transparent;
+}
+
+.btn {
+  padding: 10px 30px;
+  margin-bottom: 0;
+  font-size: 18px;
+  border: 5px solid transparent;
+  border-radius: 0px;
+}
+
+.lead {
+  letter-spacing: 1px;
+}
+
+/* WRAP SECTIONS */
+
+/* hello */
+#hello {
+  width: 100%;
+  padding-top: 250px;
+  padding-bottom: 250px;
+}
+
+#hello h1 {
+  font-size: 90px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #74cfae;
+}
+
+#hello h2 {
+  color: #c0c0c0;
+  font-weight: 400;
+}
+
+/* Green */
+#green {
+  background-color: #74cfae;
+  padding-top: 50px;
+  margin-bottom: 0px;
+}
+
+#green h3 {
+  color: white;
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+#green p {
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+/* Footer */
+#f {
+  padding-top: 20px;
+  background-color: #74cfae;
+}
+
+#f p {
+  color: white;
+  text-align: right;
+  font-weight: 400;
+}
+
+/* Image Opacity */
+.grid img {
+  opacity: .7;
+}
+.grid img:hover {
+  opacity: 1;
 }

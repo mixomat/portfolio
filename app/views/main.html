@@ -1,22 +1,35 @@
-<div class="row marketing">
-    <h4>HTML5 Boilerplate</h4>
+<div id="hello">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 centered">
+                <h1>Marc Weinberger</h1>
 
-    <p>
-        HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or
-        sites.
-    </p>
-
-    <h4>Angular</h4>
-
-    <p>
-        AngularJS is a toolset for building the framework most suited to your application development.
-    </p>
-
-    <h4>Karma</h4>
-
-    <p>Spectacular Test Runner for JavaScript.</p>
+                <h2>SOFTWARE ENGINEER</h2>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="row marketing" ng-controller="ProjectCtrl">
+
+<div id="green">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 centered">
+                <img src="images/iphone.png" alt="">
+            </div>
+
+            <div class="col-lg-7 centered">
+                <h3>WHAT WE CAN DO?</h3>
+
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div ng-controller="ProjectCtrl">
     <h3>Projects</h3>
     <label for="filter">Filter: </label>
     <input id="filter" type="text" ng-model="search.title"/>
