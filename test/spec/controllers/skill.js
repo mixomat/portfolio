@@ -16,6 +16,6 @@ describe('Controller: SkillCtrl', function () {
   it('should attach a list of skills', function () {
     var skills = scope.skills;
     expect(skills.length).toBe(6);
-    expect(skills[0].skill).toBe('Java');
+    expect(skills[0].skill).toBe('Java/JEE');
   });
 });

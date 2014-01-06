@@ -10,29 +10,14 @@
     </div>
 </div>
 
-<div id="skills">
+<div id="skills" ng-controller="SkillCtrl">
     <div class="container">
-        <div class="row" ng-controller="SkillCtrl">
+        <div class="row">
             <div class="col-lg-2 col-lg-offset-1">
                 <h5>SKILLS</h5>
             </div>
-            <div class="col-lg-2 centered">
-                <canvas id="javascript" height="130" width="130"></canvas>
-                <p>Javascript</p>
-                <br>
-                <script>
-                    var doughnutData = [
-                        {
-                            value: 70,
-                            color: "#74cfae"
-                        },
-                        {
-                            value: 30,
-                            color: "#3c3c3c"
-                        }
-                    ];
-                    var myDoughnut = new Chart(document.getElementById("javascript").getContext("2d")).Doughnut(doughnutData, {segmentStrokeColor: '#4e4e4e', percentageInnerCutout: 80});
-                </script>
+            <div ng-repeat="skill in skills">
+                <div id="{{skill.id}}" class="col-lg-2 centered" skill="{{skill.skill}}" knowledge="{{skill.knowledge}}"></div>
             </div>
         </div>
     </div>

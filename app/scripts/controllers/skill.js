@@ -2,11 +2,11 @@
 
 angular.module('portfolioApp').controller('SkillCtrl', function ($scope) {
   $scope.skills = [
-    {skill: 'Java/JEE', value: 90},
-    {skill: 'Spring', value: 95},
-    {skill: 'iOS', value: 70},
-    {skill: 'Ruby', value: 50},
-    {skill: 'javascript', value: 80},
-    {skill: 'HTML/CSS', value: 90}
+    {id: 'java', skill: 'Java/JEE', knowledge: 90},
+    {id: 'spring', skill: 'Spring', knowledge: 95},
+    {id: 'ios', skill: 'iOS', knowledge: 70},
+    {id: 'ruby', skill: 'Ruby', knowledge: 50},
+    {id: 'javascript', skill: 'Javascript', knowledge: 80},
+    {id: 'htmlcss', skill: 'HTML/CSS', knowledge: 90}
   ];
 });
