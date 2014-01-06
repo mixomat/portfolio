@@ -14,7 +14,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     padding: 0.2em 0;
 }
 
-/* OVERALL ASPECT */
+/* General */
 body {
   background-color: #f2f2f2;
   font-family: "Lato";
@@ -146,23 +146,16 @@ hr {
   font-weight: 400;
 }
 
-/* Green */
-#green {
-  background-color: #74cfae;
-  padding-top: 50px;
-  margin-bottom: 0px;
+/* Skills */
+#skills{
+  background: #4e4e4e;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: white;
 }
 
-#green h3 {
+#skills h5, p {
   color: white;
-  font-weight: 400;
-  margin-bottom: 35px;
-}
-
-#green p {
-  color: white;
-  font-weight: 400;
-  font-size: 20px;
 }
 
 /* Footer */
