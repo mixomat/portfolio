@@ -3,6 +3,7 @@
         <div class="row">
             <div class="col-lg-12 centered">
                 <h1>Marc Weinberger</h1>
+
                 <h2>SOFTWARE ENGINEER</h2>
             </div>
         </div>
@@ -13,14 +14,13 @@
     <div class="container">
         <div class="row">
             <h3 class="col-lg-2 col-lg-offset-1">SKILLS</h3>
-            <div ng-repeat="skill in skills | startFrom:0 | limitTo:4 ">
-                <div id="{{skill.id}}" class="col-lg-2 centered" skill="{{skill.skill}}"
-                     knowledge="{{skill.knowledge}}"></div>
-            </div>
-            <div class="col-lg-2 col-lg-offset-1"></div>
-            <div ng-repeat="skill in skills | startFrom:4 | limitTo:4 ">
-                <div id="{{skill.id}}" class="col-lg-2 centered" skill="{{skill.skill}}"
-                     knowledge="{{skill.knowledge}}"></div>
+
+            <div ng-repeat="page in pages">
+                <div ng-repeat="skill in skills | startFrom:page*pageSize | limitTo:pageSize ">
+                    <div id="{{skill.id}}" class="col-lg-2 centered" skill="{{skill.skill}}"
+                         knowledge="{{skill.knowledge}}"></div>
+                </div>
+                <div class="col-lg-2 col-lg-offset-1"></div>
             </div>
         </div>
     </div>

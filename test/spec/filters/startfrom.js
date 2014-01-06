@@ -21,5 +21,4 @@ describe('Filter: startFrom', function () {
     expect(startFrom([1,2,3,4],4)).toEqual([]);
   });
 
-
 });

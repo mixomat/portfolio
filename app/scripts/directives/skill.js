@@ -3,12 +3,14 @@
 angular.module('portfolioApp').directive('skill', function () {
   return {
     scope: {
-      id: "@",
-      skill: "@"
+      id: '@',
+      skill: '@'
     },
     template: '<canvas id="{{id}}" height="130" width="130"></canvas><p>{{skill}}</p><br>',
     link: function (scope, element, attrs) {
       var knowledge = parseInt(attrs.knowledge);
+
+      // TODO move data and opts out from here
       var donutData = [
         {
           value: knowledge,
