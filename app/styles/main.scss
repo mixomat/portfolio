@@ -1,4 +1,6 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+$main-color: #74cfae;
+$dark-grey-color: #4e4e4e;
 
 //noinspection CssUnknownTarget
 @import 'sass-bootstrap/lib/bootstrap';
@@ -97,8 +99,8 @@ hr {
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #ffffff;
-  background-color: #74cfae;
+  color: white;
+  background-color: $main-color;
 }
 
 .navbar-brand {
@@ -109,7 +111,7 @@ hr {
 
 .btn-theme {
   color: white;
-  background-color: #74cfae;
+  background-color: $main-color;
   border-color: transparent;
 }
 
@@ -138,7 +140,7 @@ hr {
   font-size: 90px;
   font-weight: 700;
   letter-spacing: 3px;
-  color: #74cfae;
+  color: $main-color;
 }
 
 #hello h2 {
@@ -148,7 +150,7 @@ hr {
 
 /* Skills */
 #skills{
-  background: #4e4e4e;
+  background: $dark-grey-color;
   padding-top: 60px;
   padding-bottom: 60px;
   color: white;
@@ -161,7 +163,7 @@ hr {
 /* Footer */
 #f {
   padding-top: 20px;
-  background-color: #74cfae;
+  background-color: $main-color;
 }
 
 #f p {
