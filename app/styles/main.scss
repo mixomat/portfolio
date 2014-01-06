@@ -148,6 +148,24 @@ hr {
   font-weight: 400;
 }
 
+/* About */
+#about {
+  background-color: $dark-grey-color;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#about h4, p {
+  color: white;
+  font-size: 18px;
+}
+
+/* Resume */
+#resume {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 /* Skills */
 #skills{
   background: $dark-grey-color;
@@ -156,20 +174,9 @@ hr {
   color: white;
 }
 
-#skills h3, p {
+#skills h4, p {
   color: white;
-}
-
-/* Footer */
-#f {
-  padding-top: 20px;
-  background-color: $main-color;
-}
-
-#f p {
-  color: white;
-  text-align: right;
-  font-weight: 400;
+  font-size: 18px;
 }
 
 /* Image Opacity */
