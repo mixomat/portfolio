@@ -11,10 +11,10 @@ $grey-color: #c0c0c0;
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
 
 .browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
 
 /* General */
@@ -34,7 +34,7 @@ body {
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway";
-  font-weight: 300;
+  font-weight: 400;
   color: #333;
 }
 
@@ -90,14 +90,12 @@ hr {
   padding: 0;
 }
 
-
 .navbar {
   font-weight: 800;
   font-size: 14px;
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: white;
-  opacity: 0.95;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
@@ -134,8 +132,8 @@ hr {
 /* hello */
 #hello {
   width: 100%;
-  padding-top: 150px;
-  padding-bottom: 200px;
+  padding-top: 200px;
+  padding-bottom: 300px;
 }
 
 #hello h1 {
@@ -147,44 +145,47 @@ hr {
 
 #hello h2 {
   color: $grey-color;
-  font-weight: 400;
 }
 
 /* About */
 #about {
   background-color: $dark-grey-color;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
+  padding-top: 80px;
+  padding-bottom: 80px;
 
-#about h4, p {
-  color: white;
-  font-size: 18px;
+  h4, p {
+    color: white;
+    font-size: 20px;
+  }
 }
 
 /* Resume */
 #resume {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 /* Skills */
-#skills{
+#skills {
   background: $dark-grey-color;
   padding-top: 60px;
   padding-bottom: 60px;
   color: white;
-}
 
-#skills h4, p {
-  color: white;
-  font-size: 18px;
+  h4 {
+    color: white;
+    font-size: 20px;
+  }
+  p {
+    font-size: 18px;
+  }
 }
 
 /* Image Opacity */
 .grid img {
   opacity: .7;
 }
+
 .grid img:hover {
   opacity: 1;
 }
