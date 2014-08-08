@@ -20,6 +20,7 @@ describe('Controller: ProjectCtrl', function () {
       return $controller('ProjectCtrl', {$scope: $scope});
     };
   }));
+
   it('should attach projects to the $scope', function () {
     createController();
     $httpBackend.flush();
