@@ -1,6 +1,5 @@
 'use strict';
 
-angular.module('portfolioApp')
-  .controller('MainCtrl', function () {
+angular.module('portfolioApp').controller('MainCtrl', function () {
 
 });
