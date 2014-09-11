@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Directive: skill', function () {
+describe('Directive: SkillChart', function () {
   beforeEach(module('portfolioApp'));
 
 
