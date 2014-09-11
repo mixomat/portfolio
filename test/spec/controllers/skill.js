@@ -18,4 +18,9 @@ describe('Controller: SkillCtrl', function () {
     expect(skills.length).toBe(7);
     expect(skills[0].skill).toBe('Java/JEE');
   });
+
+  it('should attach the page size', function () {
+    var pageSize = scope.pageSize;
+    expect(pageSize).toBe(7);
+  });
 });

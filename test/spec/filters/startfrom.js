@@ -1,10 +1,11 @@
 'use strict';
 
 describe('Filter: startFrom', function () {
+// initialize a new instance of the filter before each test
+  var startFrom;
+
   beforeEach(module('portfolioApp'));
 
-  // initialize a new instance of the filter before each test
-  var startFrom;
   beforeEach(inject(function ($filter) {
     startFrom = $filter('startFrom');
   }));

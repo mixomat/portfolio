@@ -10,6 +10,6 @@ angular.module('portfolioApp').controller('SkillCtrl', function ($scope) {
     {id: 'ios', skill: 'iOS', knowledge: 70},
     {id: 'android', skill: 'Android', knowledge: 40}
   ];
-  $scope.pageSize = 4;
+  $scope.pageSize = $scope.skills.length;
   $scope.pages = [0,1];
 });
