@@ -7,8 +7,9 @@ angular.module('portfolioApp').controller('SkillCtrl', function ($scope) {
     {id: 'ruby', skill: 'Ruby', knowledge: 55},
     {id: 'javascript', skill: 'Javascript', knowledge: 80},
     {id: 'htmlcss', skill: 'HTML/CSS', knowledge: 90},
-    {id: 'ios', skill: 'iOS', knowledge: 70},
-    {id: 'android', skill: 'Android', knowledge: 40}
+    {id: 'ios', skill: 'iOS', knowledge: 80},
+    {id: 'android', skill: 'Android', knowledge: 65},
+    {id: 'hadoop', skill: 'Hadoop', knowledge: 40}
   ];
   $scope.pageSize = $scope.skills.length;
   $scope.pages = [0,1];
