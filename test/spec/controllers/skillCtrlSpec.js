@@ -15,12 +15,12 @@ describe('Controller: SkillCtrl', function () {
 
   it('should attach a list of skills', function () {
     var skills = scope.skills;
-    expect(skills.length).toBe(7);
+    expect(skills.length).toBe(8);
     expect(skills[0].skill).toBe('Java/JEE');
   });
 
   it('should attach the page size', function () {
     var pageSize = scope.pageSize;
-    expect(pageSize).toBe(7);
+    expect(pageSize).toBe(8);
   });
 });
