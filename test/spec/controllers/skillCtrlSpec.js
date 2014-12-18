@@ -21,6 +21,6 @@ describe('Controller: SkillCtrl', function () {
 
   it('should attach the page size', function () {
     var pageSize = scope.pageSize;
-    expect(pageSize).toBe(8);
+    expect(pageSize).toBe(4);
   });
 });
