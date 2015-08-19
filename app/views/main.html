@@ -51,19 +51,27 @@
 
 
 <div id="projects" ng-controller="ProjectCtrl">
-    <h3>Projects</h3>
-    <label for="filter">Filter: </label>
-    <input id="filter" type="text" ng-model="search.title"/>
-    <table class="table">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-1">
+        <h4>PROJECTS</h4>
+      </div>
+      <label for="filter">Filter: </label>
+      <input id="filter" type="text" ng-model="search.title"/>
+    </div>
+    <div class="row">
+      <table class="table">
         <tr>
-            <th>Title</th>
-            <th>Start</th>
-            <th>End</th>
+          <th>Title</th>
+          <th>Start</th>
+          <th>End</th>
         </tr>
-        <tr ng-repeat="project in projects | filter:search | orderBy:'-end_date' | limitTo:5">
-            <td>{{project.title}}</td>
-            <td>{{project.start_date | projectDate }}</td>
-            <td>{{project.end_date | projectDate }}</td>
+        <tr ng-repeat="project in projects | filter:search | orderBy:'-end' | limitTo:5">
+          <td>{{project.title}}</td>
+          <td>{{project.start }}</td>
+          <td>{{project.end }}</td>
         </tr>
-    </table>
+      </table>
+    </div>
+  </div>
 </div>

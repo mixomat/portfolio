@@ -1,6 +1,10 @@
 'use strict';
 
 angular.module('portfolioApp').factory('Project', function ($resource) {
-    return $resource('http://localhost:3000/api/projects/:projectId', {projectId: '@id'})
+    return $resource('http://localhost:8080/projects/:projectId', {projectId: '@id'},
+      {
+        all: {method: 'GET', isArray: false}
+      }
+    )
   }
 );
