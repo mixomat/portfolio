@@ -151,30 +151,42 @@ module.exports = function (grunt) {
 
 
     // Compiles Sass to CSS and generates necessary files if requested
-    compass: {
+    //compass: {
+    //  options: {
+    //    sassDir: '<%= yeoman.app %>/styles',
+    //    cssDir: '.tmp/styles',
+    //    generatedImagesDir: '.tmp/images/generated',
+    //    imagesDir: '<%= yeoman.app %>/images',
+    //    javascriptsDir: '<%= yeoman.app %>/scripts',
+    //    fontsDir: '<%= yeoman.app %>/styles/fonts',
+    //    importPath: '<%= yeoman.app %>/bower_components',
+    //    httpImagesPath: '/images',
+    //    httpGeneratedImagesPath: '/images/generated',
+    //    httpFontsPath: '/styles/fonts',
+    //    relativeAssets: false,
+    //    assetCacheBuster: false,
+    //    raw: 'Sass::Script::Number.precision = 10\n'
+    //  },
+    //  dist: {
+    //    options: {
+    //      generatedImagesDir: '<%= yeoman.dist %>/images/generated'
+    //    }
+    //  },
+    //  server: {
+    //    options: {
+    //      debugInfo: true
+    //    }
+    //  }
+    //},
+
+    sass: {
       options: {
-        sassDir: '<%= yeoman.app %>/styles',
-        cssDir: '.tmp/styles',
-        generatedImagesDir: '.tmp/images/generated',
-        imagesDir: '<%= yeoman.app %>/images',
-        javascriptsDir: '<%= yeoman.app %>/scripts',
-        fontsDir: '<%= yeoman.app %>/styles/fonts',
-        importPath: '<%= yeoman.app %>/bower_components',
-        httpImagesPath: '/images',
-        httpGeneratedImagesPath: '/images/generated',
-        httpFontsPath: '/styles/fonts',
-        relativeAssets: false,
-        assetCacheBuster: false,
-        raw: 'Sass::Script::Number.precision = 10\n'
+        sourceMap: true,
+        includePaths: ['<%= yeoman.app %>/bower_components']
       },
       dist: {
-        options: {
-          generatedImagesDir: '<%= yeoman.dist %>/images/generated'
-        }
-      },
-      server: {
-        options: {
-          debugInfo: true
+        files: {
+          '.tmp/styles/main.css': '<%= yeoman.app %>/styles/main.scss'
         }
       }
     },
@@ -305,13 +317,13 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
-        'compass:server'
+        'sass'
       ],
       test: [
-        'compass'
+        'sass'
       ],
       dist: [
-        'compass:dist',
+        'sass:dist',
         'imagemin',
         'svgmin'
       ]
