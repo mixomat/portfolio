@@ -3,14 +3,18 @@ $background-color: #f8f8f8;
 $main-color: #74cfae;
 $dark-grey-color: #4e4e4e;
 $grey-color: #c0c0c0;
-$navbar-color: white;
+$navbar-color: #fff;
+$link-color: #f85c37;
+$header-font-color: #fff;
+$body-font-color: #555;
 
-//noinspection CssUnknownTarget
-@import 'sass-bootstrap/lib/bootstrap';
+/* BOOTSTRAP 3 */
+@import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
 
 /* FONTS */
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 .browsehappy {
   margin: 0.2em 0;
@@ -22,22 +26,20 @@ $navbar-color: white;
 /* General */
 body {
   background-color: $background-color;
-  font-family: "Lato";
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-size: 16px;
-  color: #555;
+  color: $body-font-color;
 
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
-
-  margin-top: 70px;
 }
 
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway";
-  font-weight: 400;
-  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: $header-font-color;
 }
 
 /* Paragraph & Typographic */
@@ -46,17 +48,9 @@ p {
   margin-bottom: 25px;
 }
 
-.centered {
-  text-align: center;
-}
-
-.mt {
-  margin-top: 40px;
-}
-
 /* Links */
 a {
-  color: #f85c37;
+  color: $link-color;
   word-wrap: break-word;
 
   -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -82,119 +76,125 @@ a:after {
   transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
-/* Bootstrap Modifications */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-.navbar {
-  font-weight: 800;
-  font-size: 14px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  background-color: $navbar-color;
-}
-
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: white;
-  background-color: $main-color;
-}
-
-.navbar-brand {
-  font-size: 60px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-.btn-theme {
-  color: white;
-  background-color: $main-color;
-  border-color: transparent;
-}
-
-.btn {
-  padding: 10px 30px;
-  margin-bottom: 0;
-  font-size: 18px;
-  border: 5px solid transparent;
-  border-radius: 0px;
-}
-
-.lead {
-  letter-spacing: 1px;
-}
-
 /* WRAP SECTIONS */
 
 /* hello */
 #hello {
+  top: 0;
+  position: relative;
   width: 100%;
-  padding-top: 160px;
-  padding-bottom: 260px;
-}
+  min-height: 450px;
+  z-index: 1;
+  padding-top: 10%;
+  background-image: linear-gradient(120deg, #1abc9c, #456990);
+  text-align: center;
 
-#hello h1 {
-  font-size: 70px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  color: $main-color;
-}
+  h1 {
+    font-size: 80px;
+    font-weight: bold;
+    letter-spacing: 4px;
+  }
 
-#hello h2 {
-  color: $grey-color;
-}
-
-/* About */
-#about {
-  background-color: $dark-grey-color;
-  padding-top: 80px;
-  padding-bottom: 80px;
-
-  h4, p {
-    color: white;
-    font-size: 20px;
+  h2 {
+    //font-size: 18px;
   }
 }
 
-/* Resume */
-#resume {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
+///* About */
+//#about {
+//  background-color: $dark-grey-color;
+//  padding-top: 80px;
+//  padding-bottom: 80px;
+//
+//  h4, p {
+//    color: white;
+//    font-size: 20px;
+//  }
+//}
+//
+///* Resume */
+//#resume {
+//  padding-top: 80px;
+//  padding-bottom: 80px;
+//}
+//
+///* Skills */
+//#skills {
+//  background: $dark-grey-color;
+//  padding-top: 60px;
+//  padding-bottom: 60px;
+//  color: white;
+//
+//  h4 {
+//    color: white;
+//    font-size: 20px;
+//  }
+//  p {
+//    font-size: 18px;
+//  }
+//}
+//
+///* Projects */
+//#projects {
+//  padding-top: 80px;
+//  padding-bottom: 80px;
+//
+//}
+//
+///* Image Opacity */
+//.grid img {
+//  opacity: .7;
+//}
+//
+//.grid img:hover {
+//  opacity: 1;
+//}
 
-/* Skills */
-#skills {
-  background: $dark-grey-color;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  color: white;
-
-  h4 {
-    color: white;
-    font-size: 20px;
-  }
-  p {
-    font-size: 18px;
-  }
-}
-
-/* Projects */
-#projects {
-  padding-top: 80px;
-  padding-bottom: 80px;
-
-}
-
-/* Image Opacity */
-.grid img {
-  opacity: .7;
-}
-
-.grid img:hover {
-  opacity: 1;
-}
+//
+///* Bootstrap Modifications */
+//hr {
+//  display: block;
+//  height: 1px;
+//  border: 0;
+//  border-top: 1px solid #ccc;
+//  margin: 1em 0;
+//  padding: 0;
+//}
+//
+//.navbar {
+//  font-weight: 800;
+//  font-size: 14px;
+//  padding-top: 15px;
+//  padding-bottom: 15px;
+//  background-color: $navbar-color;
+//}
+//
+//.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+//  color: white;
+//  background-color: $main-color;
+//}
+//
+//.navbar-brand {
+//  font-size: 60px;
+//  padding-top: 0px;
+//  padding-bottom: 0px;
+//}
+//
+//.btn-theme {
+//  color: white;
+//  background-color: $main-color;
+//  border-color: transparent;
+//}
+//
+//.btn {
+//  padding: 10px 30px;
+//  margin-bottom: 0;
+//  font-size: 18px;
+//  border: 5px solid transparent;
+//  border-radius: 0px;
+//}
+//
+//.lead {
+//  letter-spacing: 1px;
+//}
+//
