@@ -1,10 +1,7 @@
 $background-color: #f2f2f2;
-$main-color: #74cfae;
-$dark-grey-color: #4e4e4e;
-$grey-color: #c0c0c0;
-$navbar-color: #fff;
 $link-color: #f85c37;
-$header-font-color: #f0f0f0;
+$header-font-color: #4a4a4a;
+$hello-font-color: #f0f0f0;
 $body-font-color: #555;
 
 /* BOOTSTRAP 3 */
@@ -84,6 +81,11 @@ a:after {
     font-size: 80px;
     font-weight: bold;
     letter-spacing: 4px;
+    color: $hello-font-color;
+  }
+
+  h4 {
+    color: $hello-font-color;
   }
 }
 
