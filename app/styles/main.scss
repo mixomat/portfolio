@@ -1,11 +1,10 @@
-$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
-$background-color: #f8f8f8;
+$background-color: #f2f2f2;
 $main-color: #74cfae;
 $dark-grey-color: #4e4e4e;
 $grey-color: #c0c0c0;
 $navbar-color: #fff;
 $link-color: #f85c37;
-$header-font-color: #fff;
+$header-font-color: #f0f0f0;
 $body-font-color: #555;
 
 /* BOOTSTRAP 3 */
@@ -27,9 +26,8 @@ $body-font-color: #555;
 body {
   background-color: $background-color;
   font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  color: $body-font-color;
+  font-weight: 400;
+  font-size: 14px;
 
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
@@ -46,6 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
   line-height: 28px;
   margin-bottom: 25px;
+  font-size: 16px;
 }
 
 /* Links */
@@ -53,10 +52,6 @@ a {
   color: $link-color;
   word-wrap: break-word;
 
-  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
   transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
@@ -69,16 +64,12 @@ a:focus {
 
 a:before,
 a:after {
-  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+
   transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
-/* WRAP SECTIONS */
+/* SECTIONS */
 
-/* hello */
 #hello {
   top: 0;
   position: relative;
@@ -94,10 +85,18 @@ a:after {
     font-weight: bold;
     letter-spacing: 4px;
   }
+}
 
-  h2 {
-    //font-size: 18px;
-  }
+#projects {
+
+}
+
+#social {
+
+}
+
+#footer {
+
 }
 
 ///* About */
