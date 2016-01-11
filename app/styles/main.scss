@@ -1,8 +1,13 @@
-$background-color: #f2f2f2;
-$link-color: #f85c37;
-$header-font-color: #4a4a4a;
-$hello-font-color: #f0f0f0;
+/* Background colors */
+$body-color: #fff;
+$link-color: #F45B69;
+$footer-color: #333;
+
+/* Font colors */
 $body-font-color: #555;
+$heading-font-color: #4a4a4a;
+$hello-font-color: #f0f0f0;
+$footer-font-color: #f0f0f0;
 
 /* BOOTSTRAP 3 */
 @import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
@@ -12,6 +17,7 @@ $body-font-color: #555;
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
+/* Misc */
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -19,11 +25,16 @@ $body-font-color: #555;
   padding: 0.2em 0;
 }
 
+.centered {
+  text-align: center
+}
+
 /* General */
 body {
-  background-color: $background-color;
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  background-color: $body-color;
+  color: $body-font-color;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
   font-size: 14px;
 
   -webkit-font-smoothing: antialiased;
@@ -34,7 +45,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: $header-font-color;
+  color: $heading-font-color;
 }
 
 /* Paragraph & Typographic */
@@ -65,7 +76,7 @@ a:after {
   transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
-/* SECTIONS */
+/* Sections */
 
 #hello {
   top: 0;
@@ -76,6 +87,7 @@ a:after {
   padding-top: 10%;
   background-image: linear-gradient(120deg, #1abc9c, #456990);
   text-align: center;
+  text-transform: uppercase;
 
   h1 {
     font-size: 80px;
@@ -87,17 +99,37 @@ a:after {
   h4 {
     color: $hello-font-color;
   }
+
 }
 
 #projects {
 
 }
 
-#social {
-
-}
-
 #footer {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: $footer-color;
+
+  h4 {
+    color: $footer-font-color;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  i {
+    font-size: 30px;
+    padding-right: 15px;
+    color: $footer-font-color;
+
+    &:hover {
+      color: $link-color;
+    }
+  }
+
+  p {
+    color: $footer-font-color;
+  }
 
 }
 
