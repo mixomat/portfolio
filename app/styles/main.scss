@@ -126,13 +126,13 @@ a:after {
   }
 
   i {
-    font-size: 30px;
+    font-size: 32px;
     padding-right: 15px;
     color: $footer-font-color;
 
     &:hover {
-      color: $green-accent-color;
-      transform: scale(1.1);
+      //color: $green-accent-color;
+      transform: scale(1.2);
     }
   }
 
