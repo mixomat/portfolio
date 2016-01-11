@@ -110,6 +110,10 @@ a:after {
 
 }
 
+#skills {
+
+}
+
 #footer {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -128,6 +132,7 @@ a:after {
 
     &:hover {
       color: $green-accent-color;
+      transform: scale(1.1);
     }
   }
 
