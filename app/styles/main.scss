@@ -17,8 +17,7 @@ $footer-font-color: #f0f0f0;
 @import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
 
 /* FONTS */
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 /* Misc */
@@ -102,8 +101,26 @@ a:after {
 
   h4 {
     color: $hello-font-color;
+    margin-bottom: 0;
   }
 
+}
+
+#avatar {
+  background-image: url('http://www.gravatar.com/avatar/558748c0f2de3e1dc407474591f5aec5?s=120');
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  height: 120px;
+  width: 120px;
+  position: relative;
+  top: -60px;
+  border: 2px solid white;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.35);
+  z-index: 2;
 }
 
 #projects {
