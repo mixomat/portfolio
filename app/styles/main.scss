@@ -60,7 +60,7 @@ p {
 
 /* Links */
 a {
-  color: $link-color;
+  color: $green-accent-color;
   word-wrap: break-word;
 
   transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -68,7 +68,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #7b7b7b;
+  color: $blue-accent-color;
   text-decoration: none;
   outline: 0;
 }
@@ -81,7 +81,7 @@ a:after {
 
 /* Sections */
 
-#hello {
+#header {
   top: 0;
   position: relative;
   width: 100%;
@@ -94,7 +94,7 @@ a:after {
 
   h1 {
     font-size: 80px;
-    font-weight: bold;
+    font-weight: 200;
     letter-spacing: 4px;
     color: $hello-font-color;
   }
@@ -111,6 +111,7 @@ a:after {
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: -20px;
   height: 120px;
   width: 120px;
   position: relative;
@@ -123,8 +124,16 @@ a:after {
   z-index: 2;
 }
 
-#projects {
+#about {
+  p {
+    font-size: 18px;
+  }
+  padding-bottom: 80px;
+}
 
+#projects {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 #skills {
