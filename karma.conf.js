@@ -18,6 +18,7 @@ module.exports = function(config) {
       'app/bower_components/angular-sanitize/angular-sanitize.js',
       'app/bower_components/angular-route/angular-route.js',
       'app/bower_components/Chart.js/Chart.min.js',
+      'app/bower_components/lodash/lodash.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
       'test/spec/**/*.js'
@@ -27,7 +28,7 @@ module.exports = function(config) {
     exclude: [],
 
     // web server port
-    port: 8080,
+    port: 1337,
 
     // level of logging
     // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG

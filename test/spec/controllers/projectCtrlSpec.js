@@ -10,10 +10,13 @@ describe('Controller: ProjectCtrl', function () {
     $scope = _$rootScope_.$new();
 
     // register the $httpBackend mock calls
-    $httpBackend.when('GET', 'http://localhost:3000/api/projects').respond([
-      {projects: {title: 'test'}}
-    ]);
-    $httpBackend.expectGET('http://localhost:3000/api/projects');
+    $httpBackend.when('GET', 'http://localhost:8080/projects').respond({
+      _embedded: {
+        projects: [
+          {title: 'test'}
+        ]
+      }
+    });
 
     // Initialize the controller and a mock $scope
     createController = function () {
