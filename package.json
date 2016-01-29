@@ -2,7 +2,11 @@
   "name": "portfolio",
   "version": "1.0.0",
   "license": "MIT",
-  "repository": "https://github.com/mixomat/portfolio",
+  "author": "Marc Weinberger <marc.weinberger@me.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mixomat/portfolio"
+  },
   "dependencies": {
     "@cycle/core": "^6.0.0",
     "@cycle/dom": "^9.0.2",
