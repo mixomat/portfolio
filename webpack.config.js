@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: [
@@ -27,12 +28,15 @@ module.exports = {
           presets: ['es2015']
         }
       },
-      {test: /\.scss$/, loader: 'style!css!sass'},
+      {test: /\.scss$/, loader: ExtractTextPlugin.extract('style', '!css!sass')},
       {test: /\.(woff|eot|ttf|woff2)$/, loader: 'url?limit=10000'},
       {test: /\.(png|jpg|svg)$/, loader: 'url?limit=10000'}
     ]
   },
 
+  plugins: [
+    new ExtractTextPlugin("main.css")
+  ],
 
   // our webpack dev server config
   devServer: {
