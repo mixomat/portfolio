@@ -29,13 +29,13 @@ module.exports = {
         }
       },
       {test: /\.scss$/, loader: ExtractTextPlugin.extract('style', '!css!sass')},
-      {test: /\.(woff|eot|ttf|woff2)$/, loader: 'url?limit=10000'},
-      {test: /\.(png|jpg|svg)$/, loader: 'url?limit=10000'}
+      {test: /\.(woff|eot|ttf|woff2|svg)$/, loader: 'file?name=assets/fonts/[name].[hash].[ext]'},
+      {test: /\.(png|jpg)$/, loader: 'url?limit=10000'}
     ]
   },
 
   plugins: [
-    new ExtractTextPlugin("main.css")
+    new ExtractTextPlugin("assets/styles/main.css")
   ],
 
   // our webpack dev server config
