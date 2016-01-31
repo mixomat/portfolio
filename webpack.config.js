@@ -40,7 +40,13 @@ module.exports = {
 
   // our webpack dev server config
   devServer: {
-    contentBase: 'src'
+    contentBase: 'src',
+    proxy: {
+      '/api/*': {
+        target: 'http://localhost:8080',
+        secure: false
+      }
+    }
   }
 
 
