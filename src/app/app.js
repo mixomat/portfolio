@@ -1,14 +1,14 @@
 import {Observable} from 'rx';
 import Cycle from '@cycle/core';
-import {div, ul, li, button, h1, h4, a, makeDOMDriver} from '@cycle/dom';
+import {div, span, h1, h4, a, makeDOMDriver} from '@cycle/dom';
 import {makeHTTPDriver} from '@cycle/http';
 
 function request() {
   return Observable.just({url: 'http://localhost:3000/api/projects'});
 }
 
-function model(responses) {
-  return responses.HTTP
+function model(sources) {
+  return sources.HTTP
     // TODO filter requests .filter(res$ => res$.request.url.indexOf)
     .mergeAll()
     .do(response => console.log(response.body.content))
@@ -18,8 +18,12 @@ function model(responses) {
 
 function view(projectList$) {
   return projectList$.map(projectList =>
-    //div('Hello Marc')
-    ul(projectList.map(project => li(project.title)))
+    div('.row .centered',
+      projectList.map(project => div('.col-lg-4', [
+        span('.project-title', project.title),
+        span('.project-customer', project.client)
+      ]))
+    )
   )
 }
 
