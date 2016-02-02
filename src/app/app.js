@@ -4,7 +4,7 @@ import {div, span, h1, h4, a, makeDOMDriver} from '@cycle/dom';
 import {makeHTTPDriver} from '@cycle/http';
 
 function request() {
-  return Observable.just({url: 'http://localhost:3000/api/projects'});
+  return Observable.just({url: '/api/projects'});
 }
 
 function model(sources) {
