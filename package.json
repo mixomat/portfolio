@@ -19,6 +19,7 @@
     "babel-loader": "^6.2.1",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-stage-2": "^6.3.13",
+    "casual": "^1.5.1",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
@@ -47,6 +48,7 @@
     "grunt-svgmin": "~0.2.0",
     "grunt-usemin": "~2.0.0",
     "jshint-stylish": "~0.1.3",
+    "json-server": "^0.8.7",
     "karma": "~0.10.9",
     "karma-chrome-launcher": "~0.1.2",
     "karma-coffee-preprocessor": "~0.1.2",
@@ -76,6 +78,7 @@
     "clean": "rimraf dist .tmp .sass-cache",
     "build": "webpack --profile --colors --display-error-details --display-cached",
     "start": "webpack-dev-server --inline --colors --port 3000",
-    "test": "grunt test --verbose"
+    "server": "json-server -p 8080 --routes server/routes.json server/db.js",
+    "test": "karma start --serverPort=1339 --urlRoot=/"
   }
 }
