@@ -132,9 +132,62 @@ a:after {
   padding-bottom: 80px;
 }
 
+
+/* ------------------------------------------------------------------ */
+/* d. Resume Section
+/* ------------------------------------------------------------------ */
+
+#resume {
+  background-color: #f2f2f2;
+  padding-top: 90px;
+  padding-bottom: 72px;
+  overflow: hidden;
+
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    span {
+      border-bottom: 3px solid #11ABB0;
+      padding-bottom: 6px;
+    }
+  }
+}
+
+#resume h3 {
+  font: 25px/30px 'opensans-bold', sans-serif;
+}
+
+#resume .header-col { padding-top: 9px; }
+#resume .main-col { padding-right: 10%; }
+
+.education, .work, .projects {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #E8E8E8;
+}
+#resume .info {
+  font: 16px/24px 'librebaskerville-italic', serif;
+  color: #6E7881;
+  margin-bottom: 18px;
+  margin-top: 9px;
+}
+#resume .info span {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+#resume .date {
+  font: 15px/24px 'opensans-regular', sans-serif;
+  margin-top: 6px;
+}
+
+#resume>section{
+  padding-top:50px;
+}
+
 #projects {
   padding-top: 80px;
   padding-bottom: 80px;
+  background-color: #f2f2f2;
 }
 
 #skills {
