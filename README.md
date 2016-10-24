@@ -1,6 +1,9 @@
 # Portfolio homepage
-Personal portfolio home page, scaffold with [Yeoman](http://yeoman.io/) and developed with [AngularJS](https://angularjs.org/).
+
+My portfolio home page.
   
 ## TODOs
 
 * Create favicon
+* Implement project listing
+* Add skills charts
