@@ -1,17 +1,18 @@
-import {Observable} from 'rx';
-import Cycle from '@cycle/core';
-import {div, span, h3, h4, p, a, makeDOMDriver} from '@cycle/dom';
-import {makeHTTPDriver} from '@cycle/http';
+import xs from 'xstream';
+import {run} from '@cycle/xstream-run';
+import {div, h3, p, makeDOMDriver} from "@cycle/dom";
+import {makeHTTPDriver} from "@cycle/http";
+
+import "../assets/styles/main.scss";
 
 function request() {
-  return Observable.just({url: '/api/projects'});
+  return xs.of({url: '/api/projects', category: 'projects'});
 }
 
 function model(sources) {
   return sources.HTTP
-  // TODO filter requests .filter(res$ => res$.request.url.indexOf)
-    .mergeAll()
-    .do(response => console.log(response.body.content))
+    .select('projects')
+    .flatten()
     .map(response => response.body.content)
     .startWith([]);
 }
@@ -39,4 +40,4 @@ const drivers = {
   HTTP: makeHTTPDriver()
 };
 
-Cycle.run(main, drivers);
+run(main, drivers);

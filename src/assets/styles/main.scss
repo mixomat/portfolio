@@ -13,14 +13,6 @@ $heading-font-color: #4a4a4a;
 $hello-font-color: #f0f0f0;
 $footer-font-color: #f0f0f0;
 
-/* BOOTSTRAP 3 */
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-@import '~bootstrap-sass/assets/stylesheets/bootstrap';
-
-/* FONTS */
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-
 /* Misc */
 .browsehappy {
   margin: 0.2em 0;

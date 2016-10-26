@@ -1,41 +1,46 @@
-var webpack = require('webpack');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+const webpack = require('webpack');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const projectRoot = path.resolve(__dirname, './');
 
 module.exports = {
-  entry: [
-    'babel-polyfill',
-    './src/assets/styles/main.scss',
-    './src/app/app.js'
-  ],
+
+  entry: {
+    app: './src/app/app.js'
+  },
 
   output: {
-    path: "./dist",
-    filename: "bundle.js"
+    path: path.resolve(projectRoot, './dist'),
+    filename: '[name].bundle.js'
   },
 
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['.js'],
+    modules: ['node_modules']
   },
 
   module: {
     loaders: [
       {
         test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel',
-        query: {
-          cacheDirectory: true,
-          presets: ['es2015']
-        }
+        exclude: /node_modules/,
+        loader: 'babel-loader'
       },
-      {test: /\.scss$/, loader: ExtractTextPlugin.extract('style', '!css!sass')},
+      {
+        test: /\.scss$|\.sass$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
+      },
       {test: /\.(woff|eot|ttf|woff2|svg)$/, loader: 'file?name=assets/fonts/[name].[hash].[ext]'},
       {test: /\.(png|jpg)$/, loader: 'url?limit=10000'}
     ]
   },
 
   plugins: [
-    new ExtractTextPlugin("assets/styles/main.css")
+    new HtmlWebpackPlugin({
+      template: path.resolve(projectRoot, 'src', 'index.html'),
+      chunksSortMode: 'dependency'
+    }),
   ],
 
   // our webpack dev server config
