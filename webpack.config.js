@@ -47,6 +47,15 @@ module.exports = {
 
   devServer: {
     contentBase: 'src',
+    stats: {
+      assets: true,
+      colors: true,
+      version: true,
+      hash: true,
+      timings: true,
+      chunks: false,
+      chunkModules: false
+    },
     proxy: {
       '/api/*': {
         target: 'http://localhost:8080',
