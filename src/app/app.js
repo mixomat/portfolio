@@ -3,7 +3,7 @@ import {run} from '@cycle/xstream-run';
 import {div, h3, p, makeDOMDriver} from "@cycle/dom";
 import {makeHTTPDriver} from "@cycle/http";
 
-import "../assets/styles/main.scss";
+import "../assets/styles/portfolio.scss";
 
 function request() {
   return xs.of({url: '/api/projects', category: 'projects'});

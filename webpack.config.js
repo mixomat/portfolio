@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const projectRoot = path.resolve(__dirname, './');
 
@@ -29,7 +30,7 @@ module.exports = {
       },
       {
         test: /\.scss$|\.sass$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader']
+        loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
       },
       {test: /\.(woff|eot|ttf|woff2|svg)$/, loader: 'file?name=assets/fonts/[name].[hash].[ext]'},
       {test: /\.(png|jpg)$/, loader: 'url?limit=10000'}
@@ -37,13 +38,13 @@ module.exports = {
   },
 
   plugins: [
+    new ExtractTextPlugin('assets/styles/portfolio.css'),
     new HtmlWebpackPlugin({
       template: path.resolve(projectRoot, 'src', 'index.html'),
       chunksSortMode: 'dependency'
     }),
   ],
 
-  // our webpack dev server config
   devServer: {
     contentBase: 'src',
     proxy: {
