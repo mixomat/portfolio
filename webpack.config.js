@@ -8,12 +8,12 @@ const projectRoot = path.resolve(__dirname, './');
 module.exports = {
 
   entry: {
-    app: './src/app/app.js'
+    portfolio: './src/app/app.js'
   },
 
   output: {
     path: path.resolve(projectRoot, './dist'),
-    filename: '[name].bundle.js'
+    filename: '[name].bundle.[hash].js'
   },
 
   resolve: {
@@ -38,7 +38,7 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin('assets/styles/portfolio.css'),
+    new ExtractTextPlugin('assets/styles/[name].[hash].css'),
     new HtmlWebpackPlugin({
       template: path.resolve(projectRoot, 'src', 'index.html'),
       chunksSortMode: 'dependency'
