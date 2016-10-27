@@ -41,7 +41,6 @@
     "node": ">=0.8.0"
   },
   "scripts": {
-    "clean": "rimraf dist .tmp .sass-cache",
     "prebuild": "rimraf dist",
     "build": "webpack --profile --colors",
     "start": "webpack-dev-server --inline --port 3000",
