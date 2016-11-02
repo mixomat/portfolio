@@ -42,7 +42,7 @@
   },
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "webpack --profile --colors",
+    "build": "webpack -p --profile --colors",
     "start": "webpack-dev-server --port 3000",
     "server": "json-server -p 8080 --routes server/routes.json server/db.js",
     "test": "echo karma tests are disabled for now"
