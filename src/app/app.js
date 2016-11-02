@@ -12,6 +12,7 @@ function request() {
 function model(sources) {
   return sources.HTTP
     .select('projects')
+    .map((response$) => response$.replaceError(() => xs.empty()))
     .flatten()
     .map(response => response.body.content)
     .startWith([]);
