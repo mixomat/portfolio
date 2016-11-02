@@ -12,8 +12,8 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(projectRoot, './dist'),
-    filename: '[name].bundle.[hash].js'
+    path: path.resolve(projectRoot, 'dist'),
+    filename: 'assets/scripts/[name].[hash].bundle.js'
   },
 
   resolve: {
