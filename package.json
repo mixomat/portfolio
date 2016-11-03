@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "author": "Marc Weinberger <marc.weinberger@me.com>",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/mixomat/portfolio"
@@ -14,10 +15,11 @@
     "xstream": "^7.0.0"
   },
   "devDependencies": {
-    "babel-core": "^6.18.0",
+    "babel-core": "^6.18.2",
     "babel-loader": "^6.2.6",
     "babel-preset-es2015": "^6.18.0",
     "casual": "^1.5.1",
+    "chai": "^3.5.0",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "2.0.0-beta.4",
     "file-loader": "^0.8.5",
@@ -28,6 +30,7 @@
     "karma": "~1.3.0",
     "karma-chrome-launcher": "~2.0.0",
     "karma-jasmine": "^1.0.2",
+    "mocha": "^3.1.2",
     "node-sass": "^3.10.1",
     "postcss-loader": "^0.8.0",
     "rimraf": "^2.5.1",
@@ -45,6 +48,6 @@
     "build": "webpack -p --profile --colors",
     "start": "webpack-dev-server --port 3000",
     "server": "json-server -p 8080 --routes server/routes.json server/db.js",
-    "test": "echo karma tests are disabled for now"
+    "test": "mocha --require babel-register src/**/*.test.js"
   }
 }
