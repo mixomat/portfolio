@@ -8,7 +8,7 @@ const projectRoot = path.resolve(__dirname, './');
 module.exports = {
 
   entry: {
-    portfolio: './src/app/app.js'
+    portfolio: './src/main.js'
   },
 
   output: {

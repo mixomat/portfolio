@@ -1,11 +1,7 @@
-import xs from 'xstream';
-import {run} from '@cycle/xstream-run';
-import {div, h3, p, makeDOMDriver} from "@cycle/dom";
-import {makeHTTPDriver} from "@cycle/http";
+import xs from "xstream";
+import {div, h3, p} from "@cycle/dom";
 
-import "../assets/styles/portfolio.scss";
-
-function request() {
+export function request() {
   return xs.of({url: '/api/projects', category: 'projects'});
 }
 
@@ -32,13 +28,7 @@ function view(projectList$) {
   )
 }
 
-function main(sources) {
+export function projects(sources) {
   return {DOM: view(model(sources)), HTTP: request()};
 }
 
-const drivers = {
-  DOM: makeDOMDriver('#resume .container'),
-  HTTP: makeHTTPDriver()
-};
-
-run(main, drivers);
